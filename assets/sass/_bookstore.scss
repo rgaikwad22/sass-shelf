@@ -1,0 +1,69 @@
+/*=================================
+  bookstore section styling starts here
+=================================*/
+
+.bookstore-section {
+  padding: 84px 0;
+
+  .heading {
+    color: map-get($map: $colors, $key: primaryColor);
+    @include font($size: 32px);
+  }
+
+  .para {
+    width: 90%;
+    margin-top: 25px;        
+    color: map-get($map: $colors, $key: primaryColor);
+    line-height: 28px;
+    @include font($size: 18px);
+  }
+
+  &__list {
+    margin-top: 60px;
+    @include flex();
+    @include wrap($wrap: wrap);
+    
+
+    li { @include shortFlex($flexBasis: 23.5%); }
+    li:not(:last-child) { margin-right: 2%; }
+    li:nth-child(4n) { margin-right: 0; }
+    li:nth-child(n + 5) { margin-top: 40px; }
+
+  }
+  
+  &__fig {
+    @include flex();
+    @include direction($direction: column);
+    @include align($align: center);
+
+    .image-caption {
+      margin-top: 20px;
+      text-align: center;
+      @include font($size: 18px);
+    }
+  }
+
+  &__slider-btn {
+    margin-top: 60px;
+    @include flex();
+    @include justify($justify: center);
+
+    li {
+      padding: 15px 20px;
+      background-color: map-get($map: $colors, $key: lightGrey);
+      cursor: pointer;
+    }
+
+    li:not(:last-child) { margin-right: 1%; }
+
+    .active {
+      background-color: map-get($map: $colors, $key: lightdarkBlue);
+      color: map-get($map: $colors, $key: white);
+    }
+  }
+  
+}
+
+/*=================================
+  bookstore section styling ends here
+=================================*/

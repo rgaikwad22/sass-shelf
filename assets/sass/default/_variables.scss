@@ -1,0 +1,30 @@
+$colors: (
+  primaryColor: #726C6F,
+  secondaryColor: #333333,
+  activeBlue: #85C5F2,
+  opacityColor: hsla(240, 0%, 42%, 0.714),
+  textShadow: #2f2f2f,
+  white: #fff,
+  black: #000,
+  lightGrey: #EDEDED,
+  lightBlue: #0B6498,
+  lightdarkBlue: #086599,
+);
+
+$devices: (
+  largeLaptop: 1440px,
+  laptop: 1280px,
+  smallLaptop: 1024px,
+  tablet: 995px,
+  ipad: 768px,
+  extralargePhone: 640px,
+  largePhone: 480px,
+  mediumPhone: 375px,
+  smallPhone:320px
+);
+
+$iconContent: (
+  facebook: "\f082",
+  instagram: "\f16d",
+  twitter: "\f099",
+)

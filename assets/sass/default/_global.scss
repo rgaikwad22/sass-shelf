@@ -1,0 +1,56 @@
+// common styling starts here
+
+body {
+    overflow: hidden;
+    @include font($family: sans-serif);
+}
+
+a { text-decoration: none; }
+li { list-style-type: none; }
+
+.icon {
+    width: 13px;
+    height: 13px;
+    display: block;
+    position: relative;
+    color: map-get($map: $colors, $key: lightWhite);
+    text-indent: -9999px;
+}
+
+.icon:before,
+.icon::after {
+    display: block;
+    color: map-get($map: $colors, $key: secondaryColor);
+    text-indent: 0;
+    @include position($position: absolute, $top: 0, $left: 0);
+    @include transition(all, .2s, ease-in-out);
+    @include font($family: "FontAwesome");
+}
+
+.btn {
+    padding: 14px 28px;
+    display: inline-block;
+    color: map-get($map: $colors, $key: white);
+    white-space: nowrap;
+    @include transition(all, .2s, ease-in-out);
+}
+
+img {
+    @include img($width: 100%, $height: 100%, $objFit: cover);
+}
+
+/*for wrapper*/
+.wrapper {
+    width: 85%;
+    max-width: 1290px;
+    margin: 0 auto;
+}
+
+@each $key,
+$value in $iconContent {
+    .icon-#{$key}::before {
+        content: $value;
+    }
+}
+
+// common styling ends here

@@ -1,0 +1,23 @@
+/*=================================
+  footer styling starts here
+=================================*/
+
+footer {
+  padding: 22px 0;
+  background-color: map-get($map: $colors, $key: secondaryColor);
+  
+  .wrapper {
+    @include flex();
+    @include justify($justify: center);
+  }
+  
+  .para--copyright {
+    color: map-get($map: $colors, $key: white);
+    text-align: center;
+    @include font($size: 18px);
+  }
+}
+
+/*=================================
+  footer styling ends here
+=================================*/
